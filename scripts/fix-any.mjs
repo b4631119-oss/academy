@@ -76,7 +76,7 @@ for (const [filePath, lines] of Object.entries(filesToFix)) {
   
   if (content !== linesBefore) {
     writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath.split('/academy-exam/')[1]} (${lines.length} any)`);
+    console.log(`Fixed: ${filePath.replace(`${process.cwd()}/`, '')} (${lines.length} any)`);
   }
 }
 
