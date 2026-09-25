@@ -1,53 +1,34 @@
-# 🎓 PROlab Academy Exam
+# 🎓 PROlab Academy
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ## 📋 О проекте
 
-**PROlab Academy Exam** —  это современная и безопасная платформа для проведения онлайн-экзаменов с интегрированной защитой от списывания. Проект разработан специально для **PROlab Academy** (г. Ош, Кыргызстан) с целью обеспечения честного и прозрачного процесса тестирования студентов.
+**PROlab Academy** — сайт с открытыми учебными материалами по веб-разработке. Курсы по HTML, CSS,
+JavaScript, DOM и инструментам разработчика доступны без регистрации: у проекта нет учётных записей,
+личных кабинетов и серверной базы данных.
 
-🔗 **Сайт проекта:**  [https://prolab-academy.site](https://prolab-academy.site)  
-💻 **GitHub репозиторий:** [https://github.com/b4631119-oss/academy-exam](https://github.com/b4631119-oss/academy-exam)
+Проект разработан для **PROlab Academy** (г. Ош, Кыргызстан).
 
----
-
-## ✨ Основные возможности
-
-### Для преподавателей:
-- 🔐 Защищенная регистрация и авторизация.
-- 🏫 Создание виртуальных комнат с уникальным 6-значным кодом доступа.
-- 📝 Конструктор экзаменов с поддержкой неограниченного количества вопросов.
-- 📊 Удобный дашборд для управления комнатами и тестами.
-- ✅ Ручная проверка ответов студентов (с возможностью поставить ✅ или ❌).
-- 📈 Детальная статистика и результаты по каждому вопросу.
-
-### Для студентов:
-- 🚪 Быстрый вход по индивидуальному коду доступа и имени (без сложной регистрации).
-- ⏱️ Удобный интерфейс прохождения тестирования.
-- 🛡️ Надежная защита во время сдачи экзамена.
-
-### Общее:
-- 🇷🇺 Полная локализация на русский язык.
-- 📱 Адаптивный дизайн для любых устройств (ПК, планшеты, смартфоны).
-- 🔍 SEO-оптимизация (сайт индексируется в Google).
+- 🔗 **Сайт проекта:** https://prolab-academy.site
+- 💻 **GitHub репозиторий:** https://github.com/b4631119-oss/prolab-academy
 
 ---
 
-## 🛡️ Защита от списывания (Anti-Cheat System)
+## ✨ Возможности
 
-Платформа оснащена строгой системой контроля для предотвращения нечестной сдачи экзаменов. Во время активного теста **автоматически блокируются**:
-
-- 🚫 **Копирование и вставка** (Ctrl+C, Ctrl+V, контекстное меню).
-- 🚫 **Инструменты разработчика (DevTools)** (F12, Ctrl+Shift+I).
-- 🚫 **Переключение вкладок/окон** (отслеживание потери фокуса браузера).
-- 🚫 **Скриншоты** (PrintScreen).
-- 🚫 **Печать страницы** (Ctrl+P).
-- 🚫 **Обновление страницы** (F5, Ctrl+R) для предотвращения сброса таймера или состояния.
+- 📚 **Каталог курсов** — треки HTML, CSS, JavaScript, DOM и инструменты разработчика.
+- 📖 **Уроки с примерами кода** — теория, разборы типичных ошибок и практические задания внутри каждой темы.
+- ⚡ **Статическая выдача** — страницы уроков собираются заранее, серверных операций и запросов к БД нет.
+- ℹ️ **Информационные страницы** — «О платформе», «Контакты», «Политика конфиденциальности».
+- 🇷🇺 **Полная локализация интерфейса** на русский язык.
+- 📱 **Адаптивный дизайн** для ПК, планшетов и смартфонов.
+- 🔍 **SEO-оптимизация**: метаданные, Open Graph, structured data, sitemap, robots.
+- 🌗 **Тёмная и светлая темы** с сохранением выбора в localStorage.
 
 ---
 
@@ -55,110 +36,113 @@
 
 | Технология | Описание |
 | :--- | :--- |
-| **Next.js 15** | Фреймворк для React (используется App Router). |
-| **TypeScript** | Строгая типизация для надежности кода. |
-| **Tailwind CSS** | Утилитарный CSS-фреймворк для стилизации. |
-| **Supabase** | База данных (PostgreSQL) и аутентификация. |
-| **JWT** | Безопасная авторизация сессий студентов. |
-| **Vercel** | Платформа для хостинга и деплоя. |
+| **Next.js 16** | Фреймворк для React (App Router). |
+| **React 19** | Пользовательский интерфейс. |
+| **TypeScript** | Строгая типизация. |
+| **Tailwind CSS 4** | Утилитарная стилизация. |
+| **lucide-react** | Иконки. |
+| **Vercel** | Хостинг и деплой. |
 
 ---
 
 ## 🚀 Быстрый старт
 
 ### Требования
-- Node.js 18.x или выше
-- npm, pnpm или yarn
-- Аккаунт Supabase (для базы данных)
+
+- Node.js 20.x или выше
+- npm
 
 ### Установка
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/b4631119-oss/academy-exam.git
-cd academy-exam
+git clone https://github.com/b4631119-oss/prolab-academy.git
+cd prolab-academy
 ```
 
 2. Установите зависимости:
 ```bash
 npm install
-# или
-yarn install
 ```
 
-3. Настройте переменные окружения:
-Создайте файл `.env.local` в корне проекта и добавьте ключи Supabase:
+3. При необходимости задайте канонический домен — создайте `.env.local` в корне проекта (см. `.env.example`):
 ```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-JWT_SECRET=your_super_secret_jwt_key
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
 ```
+Переменная используется в metadata, `sitemap.xml` и `robots.txt`. Без неё подставляется домен по умолчанию.
 
 4. Запустите сервер разработки:
 ```bash
 npm run dev
-# или
-yarn dev
 ```
-Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере.
+Откройте [http://localhost:3000](http://localhost:3000).
 
 ---
 
 ## 📁 Структура проекта
 
 ```text
-academy-exam/
+prolab-academy/
 ├── src/
 │   ├── app/
-│   │   ├── (auth)/          # Страницы логина и регистрации преподавателей
-│   │   ├── (teacher)/       # Дашборд, управление комнатами и экзаменами
-│   │   ├── (student)/       # Вход для студентов, интерфейс прохождения экзамена
-│   │   ├── layout.tsx       # Глобальный layout, Мета-теги, SEO
-│   │   └── page.tsx         # Главная страница (Landing)
-│   ├── components/          # Переиспользуемые UI компоненты
-│   ├── lib/
-│   │   ├── actions.ts       # Server Actions (логика работы с БД)
-│   │   ├── supabase.ts      # Инициализация клиента Supabase
-│   │   └── translations.ts  # Словари для локализации (Русский язык)
-│   └── middleware.ts        # Защита роутов (проверка токенов/сессий)
-├── public/                  # Статические файлы (изображения, иконки)
-├── .env.local               # Локальные переменные окружения
-└── package.json             # Зависимости и скрипты
+│   │   ├── (info)/          # Публичные страницы: о платформе, контакты, политика
+│   │   ├── (skills)/        # Каталог курсов и страницы уроков
+│   │   ├── layout.tsx       # Глобальный layout, метаданные, SEO
+│   │   ├── page.tsx         # Главная страница (landing)
+│   │   ├── manifest.ts      # PWA-манифест
+│   │   ├── robots.ts        # robots.txt
+│   │   └── sitemap.ts       # sitemap.xml
+│   ├── components/          # Переиспользуемые компоненты (шапка, футер, уроки)
+│   └── lib/
+│       ├── seo/             # Ключевые слова, описания треков
+│       ├── skills/          # Контент курсов и каталог
+│       ├── theme-provider.tsx
+│       └── utils.ts
+├── e2e/                     # Playwright: проверки публичных страниц
+├── scripts/                 # Вспомогательные скрипты
+├── public/                  # Статические файлы
+└── package.json
 ```
 
 ---
 
-## 📸 Скриншоты
+## 🧪 Проверки
 
-*(Здесь будут добавлены скриншоты интерфейса платформы)*
+```bash
+npm run lint            # ESLint
+npx tsc --noEmit        # Проверка типов
+npm run build           # Production-сборка
+npm run check:lines     # Контроль размера файлов
 
-> **Примечание:** Добавьте изображения в папку `public/screenshots/` и обновите ссылки ниже.
+# Smoke-тесты публичных страниц (нужен запущенный dev-сервер или он поднимется сам)
+npx playwright test --config=playwright.config.ts
 
-<div align="center">
-  <!-- <img src="/screenshots/main.png" alt="Главная страница" width="800"/> -->
-  <p><i>Главная страница</i></p>
-  
-  <!-- <img src="/screenshots/dashboard.png" alt="Дашборд преподавателя" width="800"/> -->
-  <p><i>Дашборд преподавателя</i></p>
+# Те же проверки по production-домену
+npx playwright test --config=playwright.prod.config.ts
+```
 
-  <!-- <img src="/screenshots/exam.png" alt="Интерфейс экзамена" width="800"/> -->
-  <p><i>Интерфейс прохождения экзамена</i></p>
-</div>
+Скрипты `playwright.config.ts` и `playwright.prod.config.ts` запускают один и тот же публичный набор
+(`e2e/public-smoke.spec.ts`): главную страницу, каталог курсов, `robots.txt` и `sitemap.xml`.
+
+---
+
+## 📝 Заметки для владельца
+
+Эти заметки ведутся здесь, а не на публичных страницах.
+
+- **Переименование:** npm-пакет, README и ссылки на страницах используют имя `prolab-academy`. Сам репозиторий на GitHub нужно переименовать вручную — до этого ссылки на `github.com/b4631119-oss/prolab-academy` будут вести в никуда.
+- **Контакты опубликованы:** на `/contact` и `/privacy` указан email `bilolmen998@gmail.com` рядом с GitHub.
+- **Уже принятые решения по данным**, чтобы не искать заново: юридические реквизиты владельца на страницах не публикуются; раздел про журналы хостинга удалён; отдельная процедура удаления данных не описывается, потому что сайт ничего не собирает.
+- **Правило на будущее:** учётные записи, формы, аналитика или сторонние сервисы требуют обновления политики конфиденциальности до запуска.
 
 ---
 
 ## 👨‍💻 Автор
 
-**Разработчик:** Билолидин  
-📍 г. Ош, Кыргызстан  
-💻 **GitHub:** [https://github.com/b4631119-oss](https://github.com/b4631119-oss)
-
----
-
-## 🏢 Организация
-
-Проект разработан для **PROlab Academy** (г. Ош, Кыргызстан).
+- **Разработчик:** Билолидин
+- 📍 г. Ош, Кыргызстан
+- 💻 **GitHub:** https://github.com/b4631119-oss
+- 🌐 **Портфолио:** https://portfolio-devroot.vercel.app
 
 ---
 
@@ -170,4 +154,4 @@ academy-exam/
 
 ## 🙏 Благодарности
 
-- Сообществам [Next.js](https://nextjs.org/) и [Supabase](https://supabase.com/) за отличные инструменты разработки.
+- Сообществу [Next.js](https://nextjs.org/) за отличные инструменты разработки.
