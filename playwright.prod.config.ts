@@ -2,12 +2,12 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './e2e',
-  fullyParallel: false,
-  workers: 1,
+  testMatch: '**/public-smoke.spec.ts',
+  fullyParallel: true,
+  workers: 2,
   retries: 0,
   reporter: 'list',
-  globalSetup: './e2e/global-setup.ts',
-  outputDir: '/tmp/opencode/prod-test-results',
+  outputDir: 'test-results/production-smoke',
   use: {
     baseURL: 'https://www.prolab-academy.site',
     trace: 'retain-on-failure',
