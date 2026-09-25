@@ -10,7 +10,6 @@ import { ThemeToggle } from "@/components/ThemeToggle"
 const navLinks = [
   { href: "/", label: "Главная" },
   { href: "/skills", label: "Обучение" },
-  { href: "/login", label: "Войти" },
 ]
 
 export function PublicHeader() {
