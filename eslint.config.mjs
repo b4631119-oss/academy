@@ -23,8 +23,6 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Scripts: CommonJS utilities, not app code
     "scripts/**",
-    "register-teacher.js",
-    "test-login.js",
     "e2e/**",
   ]),
 ]);
