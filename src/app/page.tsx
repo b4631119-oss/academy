@@ -1,7 +1,8 @@
 import Link from "next/link"
-import { BookOpen, LogIn } from "lucide-react"
+import { BookOpen } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import { PublicHeader } from "@/components/PublicHeader"
+import { PublicFooter } from "@/components/PublicFooter"
 import { JsonLd } from "@/components/JsonLd"
 import { commonKeywords } from "@/lib/seo/keywords"
 
@@ -10,7 +11,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.prolab-academy
 
 export const metadata = {
   title: "PROlab Academy — IT-образование в Оше | Курсы программирования",
-  description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы JavaScript, HTML, CSS для начинающих. Современная платформа для экзаменов и тестирования. Start learning today.",
+  description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы JavaScript, HTML, CSS для начинающих, учебные материалы и онлайн-тесты. Start learning today.",
   keywords: commonKeywords,
   openGraph: {
     title: "PROlab Academy — IT-образование в Оше",
@@ -46,14 +47,14 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/hero-image.png`,
   sameAs: [
-    "https://github.com/b4631119-oss/academy-exam",
+    "https://github.com/b4631119-oss/prolab-academy",
   ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Ош",
     addressCountry: "KG",
   },
-  description: "PROlab Academy — современная образовательная платформа для изучения программирования и проведения экзаменов в Оше, Кыргызстан.",
+  description: "PROlab Academy — образовательная платформа для изучения программирования и онлайн-тестирования в Оше, Кыргызстан.",
 }
 
 export default function Home() {
@@ -73,7 +74,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 max-w-xl mx-auto slide-up">
+          <div className="mt-10 max-w-sm mx-auto slide-up">
             <Link href="/skills" className="group">
               <Card className="h-full flex flex-col items-center gap-3 p-7 text-center transition-all hover:border-sky-200 dark:hover:border-sky-700 hover:shadow-lg hover:shadow-sky-50 dark:hover:shadow-sky-950/50">
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950">
@@ -85,27 +86,11 @@ export default function Home() {
                 </div>
               </Card>
             </Link>
-
-            <Link href="/login" className="group">
-              <Card className="h-full flex flex-col items-center gap-3 p-7 text-center transition-all hover:border-sky-200 dark:hover:border-sky-700 hover:shadow-lg hover:shadow-sky-50 dark:hover:shadow-sky-950/50">
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950">
-                  <LogIn className="w-6 h-6 text-slate-600 dark:text-slate-400 transition-colors group-hover:text-sky-500 dark:group-hover:text-sky-400" />
-                </div>
-                <div>
-                  <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">Войти</h2>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">Для преподавателей и студентов</p>
-                </div>
-              </Card>
-            </Link>
           </div>
         </div>
       </main>
 
-      <footer className="border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-6 text-center text-sm text-slate-600 dark:text-slate-400">
-          PROlab Academy
-        </div>
-      </footer>
+      <PublicFooter />
     </>
   )
 }
