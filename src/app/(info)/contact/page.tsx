@@ -43,7 +43,6 @@ export default function ContactPage() {
           Вопросы по проекту и по обработке данных — по ссылкам выше.
         </p>
       </section>
-
       <section className="space-y-3 border-t border-slate-200 pt-6 dark:border-slate-800">
         <h2 className="text-xl font-semibold">Вопросы об обработке данных</h2>
         <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
