@@ -7,13 +7,52 @@
   --color-brand-hover: #0284c7;
 }
 
+/* ——— Фон страницы: градиент + два мягких пятна.
+   На однотонном фоне glass-эффект не читается — фон должен быть фактурным. */
+html {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f9 100%) fixed;
+}
+
+.dark {
+  background: linear-gradient(135deg, #0a0e1a 0%, #131826 100%) fixed;
+}
+
 body {
-  @apply bg-slate-50 text-slate-900 min-h-screen font-sans leading-relaxed transition-colors duration-200;
+  @apply text-slate-900 min-h-screen font-sans leading-relaxed transition-colors duration-200;
+  background: transparent;
 }
 
 .dark body,
 .dark {
-  @apply bg-slate-950 text-slate-100;
+  @apply text-slate-100;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+body::before {
+  width: 560px;
+  height: 560px;
+  top: -160px;
+  right: -120px;
+  background: #3b82f6;
+  opacity: 0.15;
+}
+
+body::after {
+  width: 480px;
+  height: 480px;
+  bottom: -140px;
+  left: -120px;
+  background: #0ea5e9;
+  opacity: 0.12;
 }
 
 /* Dark mode overrides for all slate-based hardcoded colors */
