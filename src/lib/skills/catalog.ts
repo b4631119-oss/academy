@@ -7,6 +7,18 @@ import { jsIntermediateLessons } from "./content/js-intermediate-lessons"
 import { jsAsyncLessons } from "./content/js-async-lessons"
 import { domAdvancedLessons } from "./content/dom-advanced-lessons"
 import { jsAdvancedLessons } from "./content/js-advanced-lessons"
+import {
+  Blocks,
+  Braces,
+  Code2,
+  Frame,
+  Layers,
+  Palette,
+  Sparkles,
+  Terminal,
+  Zap,
+  type LucideIcon,
+} from "lucide-react"
 
 export const COURSE_SOURCE = ""
 
@@ -187,6 +199,36 @@ export const TRACKS: Record<TrackId, TrackMeta> = {
     title: "DOM и браузер",
     description: "Полный курс DOM (объединяет Basics и Advanced)",
   },
+}
+
+/** Иконки треков — общие для каталога и главной страницы. */
+export const TRACK_ICONS: Record<TrackId, LucideIcon> = {
+  tools: Terminal,
+  html: Code2,
+  css: Palette,
+  "js-core": Braces,
+  "dom-basics": Frame,
+  "js-intermediate": Layers,
+  "js-async": Zap,
+  "dom-advanced": Blocks,
+  "js-advanced": Sparkles,
+  js: Braces,
+  dom: Frame,
+}
+
+/** Акцентные цвета треков — по мотивам официальных цветов технологий. */
+export const TRACK_ACCENTS: Record<TrackId, { fg: string; plate: string }> = {
+  tools: { fg: "#0ea5e9", plate: "rgba(14, 165, 233, 0.15)" },
+  html: { fg: "#f97316", plate: "rgba(249, 115, 22, 0.15)" },
+  css: { fg: "#2563eb", plate: "rgba(37, 99, 235, 0.15)" },
+  "js-core": { fg: "#eab308", plate: "rgba(234, 179, 8, 0.15)" },
+  "dom-basics": { fg: "#8b5cf6", plate: "rgba(139, 92, 246, 0.15)" },
+  "js-intermediate": { fg: "#f59e0b", plate: "rgba(245, 158, 11, 0.15)" },
+  "js-async": { fg: "#06b6d4", plate: "rgba(6, 182, 212, 0.15)" },
+  "dom-advanced": { fg: "#6366f1", plate: "rgba(99, 102, 241, 0.15)" },
+  "js-advanced": { fg: "#16a34a", plate: "rgba(22, 163, 74, 0.15)" },
+  js: { fg: "#eab308", plate: "rgba(234, 179, 8, 0.15)" },
+  dom: { fg: "#8b5cf6", plate: "rgba(139, 92, 246, 0.15)" },
 }
 
 const lessons = [
