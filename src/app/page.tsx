@@ -11,7 +11,7 @@ import { TRACKS, TRACK_ORDER, TRACK_ICONS, TRACK_ACCENTS } from "@/lib/skills/ca
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.prolab-academy.site"
 
 const DESCRIPTION =
-  "PROlab Academy — открытые учебные материалы по веб-разработке: HTML, CSS, JavaScript и DOM для начинающих, на русском языке, без регистрации. Ош, Кыргызстан."
+  "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы HTML, CSS и JavaScript для начинающих, открытый доступ без регистрации."
 
 export const metadata = {
   title: "PROlab Academy — IT-образование в Оше | Курсы программирования",
@@ -58,7 +58,7 @@ const organizationJsonLd = {
     addressLocality: "Ош",
     addressCountry: "KG",
   },
-  description: "PROlab Academy — открытые учебные материалы по веб-разработке и программированию в Оше, Кыргызстан.",
+  description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы HTML, CSS и JavaScript для начинающих, открытый доступ без регистрации.",
 }
 
 const HOW_IT_WORKS = [
