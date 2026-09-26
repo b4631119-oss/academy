@@ -1,21 +1,12 @@
 import Link from "next/link"
-import {
-  Terminal,
-  Code2,
-  Palette,
-  Braces,
-  Frame,
-  Layers,
-  Zap,
-  Blocks,
-  Sparkles,
-  ArrowRight,
-} from "lucide-react"
+import { Code2, ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import {
   getLessonsByTrack,
   TRACK_ORDER,
   TRACKS,
+  TRACK_ICONS,
+  TRACK_ACCENTS,
   isOptionalTrack,
   type TrackId,
 } from "@/lib/skills/catalog"
@@ -65,17 +56,6 @@ export const metadata = {
   robots: "index, follow",
 }
 
-const TRACK_ICONS: Record<string, typeof Code2> = {
-  tools: Terminal,
-  html: Code2,
-  css: Palette,
-  "js-core": Braces,
-  "dom-basics": Frame,
-  "js-intermediate": Layers,
-  "js-async": Zap,
-  "dom-advanced": Blocks,
-  "js-advanced": Sparkles,
-}
 
 const CORE_STAGES = TRACK_ORDER.filter((id) => !isOptionalTrack(id))
 
