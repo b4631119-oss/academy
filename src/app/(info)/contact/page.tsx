@@ -40,14 +40,7 @@ export default function ContactPage() {
           </li>
         </ul>
         <p className="text-sm leading-6 text-slate-600 dark:text-slate-400">
-          Вопросы по проекту и по обработке данных — по ссылкам выше.
-        </p>
-      </section>
-      <section className="space-y-3 border-t border-slate-200 pt-6 dark:border-slate-800">
-        <h2 className="text-xl font-semibold">Вопросы об обработке данных</h2>
-        <p className="text-base leading-7 text-slate-700 dark:text-slate-300">
-          Сайт не использует учётные записи и не хранит персональные данные. Если у вас есть вопрос об этом,
-          напишите на email выше.
+          Пишите по любым вопросам о проекте — по ссылкам выше.
         </p>
       </section>
     </article>
