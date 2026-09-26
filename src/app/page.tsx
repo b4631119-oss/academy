@@ -5,7 +5,7 @@ import { PublicHeader } from "@/components/PublicHeader"
 import { PublicFooter } from "@/components/PublicFooter"
 import { JsonLd } from "@/components/JsonLd"
 import { commonKeywords } from "@/lib/seo/keywords"
-import { TRACKS, TRACK_ORDER } from "@/lib/skills/catalog"
+import { TRACKS, TRACK_ORDER, TRACK_ICONS, TRACK_ACCENTS } from "@/lib/skills/catalog"
 
 // www is the canonical serving host (the apex host 308s to www).
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.prolab-academy.site"
@@ -88,7 +88,7 @@ export default function Home() {
       <main className="flex-1">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="max-w-2xl mx-auto text-center space-y-5 fade-in">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-tight">
+            <h1 className="gradient-text text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
               PROlab Academy
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
