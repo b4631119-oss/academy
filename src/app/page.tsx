@@ -99,9 +99,9 @@ export default function Home() {
 
           <div className="mt-10 max-w-sm mx-auto slide-up">
             <Link href="/skills" className="group">
-              <Card className="h-full flex flex-col items-center gap-3 p-7 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-300 dark:hover:border-sky-700">
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950">
-                  <BookOpen className="w-6 h-6 text-slate-600 dark:text-slate-400 transition-colors group-hover:text-sky-500 dark:group-hover:text-sky-400" />
+              <Card className="btn-glow h-full flex flex-col items-center gap-3 p-7 text-center">
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(59, 130, 246, 0.15)" }}>
+                  <BookOpen className="w-6 h-6 text-blue-500 dark:text-blue-400" />
                 </div>
                 <div>
                   <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">Обучение</h2>
@@ -123,33 +123,34 @@ export default function Home() {
                 JavaScript — или выбирать нужную тему.
               </p>
             </div>
-            {/* Один общий стеклянный слой под сеткой: blur на всю подложку,
-                а не тяжёлый blur на каждой из 9 карточек — так дешевле для GPU. */}
-            <div className="relative rounded-3xl p-3 sm:p-5">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 rounded-3xl border border-white/60 bg-gradient-to-br from-sky-100/70 via-white/40 to-sky-50/60 backdrop-blur-xl dark:border-slate-700/40 dark:from-sky-950/50 dark:via-slate-900/30 dark:to-slate-800/40"
-              />
-              <ul className="relative grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {TRACK_ORDER.map((id) => (
+            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {TRACK_ORDER.map((id) => {
+                const Icon = TRACK_ICONS[id] || Code2
+                const accent = TRACK_ACCENTS[id]
+                return (
                   <li key={id}>
-                    <div className="h-full rounded-2xl border border-white/70 bg-white/55 p-5 transition-all duration-200 hover:-translate-y-1 hover:bg-white/75 dark:border-slate-700/50 dark:bg-slate-900/45 dark:hover:bg-slate-900/65">
-                      <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
-                        {TRACKS[id].title}
-                        {TRACKS[id].optional && (
-                          <span className="ml-2 text-xs font-normal text-slate-500 dark:text-slate-400">
-                            необязательный трек
-                          </span>
-                        )}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                    <div className="glass-card h-full p-5">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-xl p-2.5" style={{ backgroundColor: accent.plate }}>
+                          <Icon className="h-5 w-5" style={{ color: accent.fg }} aria-hidden="true" />
+                        </div>
+                        <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                          {TRACKS[id].title}
+                          {TRACKS[id].optional && (
+                            <span className="ml-2 text-xs font-normal text-slate-500 dark:text-slate-400">
+                              необязательный трек
+                            </span>
+                          )}
+                        </h3>
+                      </div>
+                      <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                         {TRACKS[id].description}
                       </p>
                     </div>
                   </li>
-                ))}
-              </ul>
-            </div>
+                )
+              })}
+            </ul>
           </section>
 
           <section className="mt-16 sm:mt-20 space-y-8">
@@ -160,8 +161,10 @@ export default function Home() {
               {HOW_IT_WORKS.map((item) => (
                 <li key={item.title}>
                   <Card className="h-full p-5 space-y-2">
-                    <div className="flex items-center gap-2">
-                      <item.icon className="w-5 h-5 text-sky-500 dark:text-sky-400" aria-hidden="true" />
+                    <div className="flex items-center gap-3">
+                      <div className="rounded-xl p-2.5" style={{ backgroundColor: "rgba(59, 130, 246, 0.15)" }}>
+                        <item.icon className="w-5 h-5 text-blue-500 dark:text-blue-400" aria-hidden="true" />
+                      </div>
                       <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
                         {item.title}
                       </h3>
