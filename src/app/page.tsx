@@ -176,7 +176,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Link
               href="/skills"
-              className="inline-flex items-center rounded-xl bg-sky-600 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+              className="btn-glow inline-flex items-center rounded-xl bg-sky-600 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
             >
               Перейти к курсам
             </Link>
