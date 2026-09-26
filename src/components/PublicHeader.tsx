@@ -26,14 +26,7 @@ export function PublicHeader() {
   }, [])
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-800/60 transition-shadow",
-        scrolled
-          ? "bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-sm"
-          : "bg-white/60 dark:bg-slate-950/60 backdrop-blur-md"
-      )}
-    >
+    <header className={cn("glass-header sticky top-0 z-50 transition-shadow", scrolled && "shadow-sm")}>
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-slate-900 dark:text-slate-100">
           <span className="text-sky-500 text-xl">◆</span>
