@@ -30,16 +30,6 @@ export default function ContactPage() {
           </li>
           <li>
             <a
-              href="https://github.com/b4631119-oss/academy"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sky-700 underline decoration-sky-300 underline-offset-4 hover:text-sky-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 dark:text-sky-300 dark:hover:text-sky-200"
-            >
-              Репозиторий проекта на GitHub
-            </a>
-          </li>
-          <li>
-            <a
               href="https://github.com/b4631119-oss"
               target="_blank"
               rel="noreferrer"
