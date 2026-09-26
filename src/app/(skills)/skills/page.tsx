@@ -129,9 +129,9 @@ export default function SkillsPage() {
               <Link
                 key={id}
                 href={`/skills/${id}`}
-                className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-white dark:bg-slate-800 border border-sky-200 dark:border-sky-800 px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-slate-300 hover:border-sky-400 dark:hover:border-sky-600 transition-colors"
+                className="group inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-white/80 bg-white/60 px-3 py-1 text-xs font-medium text-slate-700 backdrop-blur-[8px] transition-colors hover:border-blue-500 hover:bg-blue-500 hover:text-white dark:border-white/10 dark:bg-white/5 dark:text-slate-200 dark:hover:border-blue-400 dark:hover:bg-blue-500 dark:hover:text-white"
               >
-                <span className="text-sky-700 dark:text-sky-400 tabular-nums">
+                <span className="text-sky-700 group-hover:text-white dark:text-sky-400 dark:group-hover:text-white tabular-nums">
                   {i + 1}
                 </span>
                 {TRACKS[id].title}
@@ -148,12 +148,13 @@ export default function SkillsPage() {
             const Icon = track.icon
             const count = getLessonsByTrack(track.id).length
             const optional = isOptionalTrack(track.id)
+            const accent = TRACK_ACCENTS[track.id]
             return (
               <Link key={track.id} href={track.href} className="group">
                 <Card className="h-full flex flex-col gap-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-300 dark:hover:border-sky-700">
                   <div className="flex items-start justify-between">
-                    <div className="rounded-xl bg-slate-50 dark:bg-slate-800 p-3 transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950">
-                      <Icon className="h-6 w-6 text-slate-600 dark:text-slate-400 transition-colors group-hover:text-sky-500 dark:group-hover:text-sky-400" />
+                    <div className="rounded-xl p-3" style={{ backgroundColor: accent.plate }}>
+                      <Icon className="h-6 w-6" style={{ color: accent.fg }} />
                     </div>
                     <span
                       className={
