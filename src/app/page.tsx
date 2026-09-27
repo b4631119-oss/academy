@@ -1,21 +1,25 @@
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
+import { BookOpen, Code2, ListChecks } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import { PublicHeader } from "@/components/PublicHeader"
 import { PublicFooter } from "@/components/PublicFooter"
 import { JsonLd } from "@/components/JsonLd"
 import { commonKeywords } from "@/lib/seo/keywords"
+import { TRACKS, TRACK_ORDER } from "@/lib/skills/catalog"
 
 // www is the canonical serving host (the apex host 308s to www).
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.prolab-academy.site"
 
+const DESCRIPTION =
+  "PROlab Academy — открытые учебные материалы по веб-разработке: HTML, CSS, JavaScript и DOM для начинающих, на русском языке, без регистрации. Ош, Кыргызстан."
+
 export const metadata = {
   title: "PROlab Academy — IT-образование в Оше | Курсы программирования",
-  description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы JavaScript, HTML, CSS для начинающих, учебные материалы и онлайн-тесты. Start learning today.",
+  description: DESCRIPTION,
   keywords: commonKeywords,
   openGraph: {
     title: "PROlab Academy — IT-образование в Оше",
-    description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы JavaScript, HTML, CSS для начинающих.",
+    description: DESCRIPTION,
     type: "website",
     url: SITE_URL,
     siteName: "PROlab Academy",
@@ -31,7 +35,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PROlab Academy — IT-образование в Оше",
-    description: "PROlab Academy — обучение программированию в Оше, Кыргызстан. Курсы JavaScript, HTML, CSS для начинающих.",
+    description: DESCRIPTION,
     images: ["/hero-image.png"],
   },
   alternates: {
@@ -54,8 +58,26 @@ const organizationJsonLd = {
     addressLocality: "Ош",
     addressCountry: "KG",
   },
-  description: "PROlab Academy — образовательная платформа для изучения программирования и онлайн-тестирования в Оше, Кыргызстан.",
+  description: "PROlab Academy — открытые учебные материалы по веб-разработке и программированию в Оше, Кыргызстан.",
 }
+
+const HOW_IT_WORKS = [
+  {
+    icon: BookOpen,
+    title: "Открытый доступ без регистрации",
+    text: "Все материалы открыты: аккаунт создавать не нужно.",
+  },
+  {
+    icon: Code2,
+    title: "Уроки с примерами кода",
+    text: "Теория с разборами и примерами кода в каждой теме.",
+  },
+  {
+    icon: ListChecks,
+    title: "Практические задания внутри уроков",
+    text: "Задачи для закрепления — в конце каждой темы.",
+  },
+]
 
 export default function Home() {
   return (
