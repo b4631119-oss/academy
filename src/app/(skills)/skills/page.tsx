@@ -170,7 +170,7 @@ export default function SkillsPage() {
             const optional = isOptionalTrack(track.id)
             return (
               <Link key={track.id} href={track.href} className="group">
-                <Card className="h-full flex flex-col gap-4 transition-all hover:border-sky-200 dark:hover:border-sky-700 hover:shadow-lg hover:shadow-sky-50 dark:hover:shadow-sky-950/50">
+                <Card className="h-full flex flex-col gap-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-300 dark:hover:border-sky-700">
                   <div className="flex items-start justify-between">
                     <div className="rounded-xl bg-slate-50 dark:bg-slate-800 p-3 transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950">
                       <Icon className="h-6 w-6 text-slate-600 dark:text-slate-400 transition-colors group-hover:text-sky-500 dark:group-hover:text-sky-400" />
