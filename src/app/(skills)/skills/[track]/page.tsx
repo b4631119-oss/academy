@@ -149,7 +149,7 @@ export default async function TrackPage({ params }: PageProps) {
             <li key={lesson.slug}>
               <Link
                 href={`/skills/${track}/${lesson.slug}`}
-                className="group flex items-center gap-4 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 min-h-[52px] transition-all hover:border-sky-200 dark:hover:border-sky-700 hover:shadow-md hover:shadow-sky-50 dark:hover:shadow-sky-950/50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+                className="group flex items-center gap-4 rounded-xl border border-slate-200/70 dark:border-slate-800/70 bg-white dark:bg-slate-900 p-4 min-h-[52px] transition-colors hover:border-sky-300 dark:hover:border-sky-700 hover:bg-slate-50 dark:hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
               >
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-50 dark:bg-slate-800 text-sm font-bold text-slate-600 dark:text-slate-400 tabular-nums transition-colors group-hover:bg-sky-50 dark:group-hover:bg-sky-950 group-hover:text-sky-500 dark:group-hover:text-sky-400">
                   {String(index + 1).padStart(2, "0")}
