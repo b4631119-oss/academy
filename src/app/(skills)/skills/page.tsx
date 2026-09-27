@@ -36,11 +36,11 @@ const LEVEL_LABELS: Record<string, string> = {
 
 export const metadata = {
   title: "Курсы программирования — PROlab Academy",
-  description: "Изучайте программирование с нуля: HTML, CSS, JavaScript и другие технологии. Современная образовательная платформа PROlab Academy в Оше, Кыргызстан. Programming courses, IT education. Start learning today.",
+  description: "Изучайте программирование с нуля: HTML, CSS, JavaScript, DOM и инструменты разработчика. Открытые учебные материалы PROlab Academy в Оше, Кыргызстан — на русском языке, без регистрации.",
   keywords: [...commonKeywords, "курсы программирования", "IT обучение", "programming courses", "IT education"],
   openGraph: {
     title: "Курсы программирования — PROlab Academy",
-    description: "Изучайте программирование с нуля: HTML, CSS, JavaScript и другие технологии. Современная образовательная платформа PROlab Academy в Оше, Кыргызстан.",
+    description: "Изучайте программирование с нуля: HTML, CSS, JavaScript, DOM и инструменты разработчика. Открытые учебные материалы PROlab Academy в Оше, Кыргызстан.",
     type: "website",
     url: `${SITE_URL}/skills`,
     siteName: "PROlab Academy",
@@ -56,7 +56,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Курсы программирования — PROlab Academy",
-    description: "Изучайте программирование с нуля: HTML, CSS, JavaScript и другие технологии.",
+    description: "Изучайте программирование с нуля: HTML, CSS, JavaScript, DOM и инструменты разработчика.",
     images: ["/hero-image.png"],
   },
   alternates: {
