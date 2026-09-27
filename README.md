@@ -4,7 +4,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![License: All rights reserved](https://img.shields.io/badge/License-All%20rights%20reserved-lightgrey.svg?style=for-the-badge)](LICENSE)
 
 ## 📋 О проекте
 
@@ -146,9 +146,26 @@ npx playwright test --config=playwright.prod.config.ts
 
 ---
 
+## 🤝 Хотите помочь или обсудить?
+
+Если вы хотите предложить улучшение, помочь с контентом или просто обсудить проект —
+напишите автору напрямую:
+
+- 📧 **Email:** bilolmen998@gmail.com
+- 💻 **GitHub:** https://github.com/b4631119-oss
+
+Контрибуции и обсуждение приветствуются — так проект становится лучше. Пожалуйста,
+не форкайте проект и не выпускайте его как отдельный продукт без разрешения автора.
+
+---
+
 ## 📄 Лицензия
 
-Этот проект лицензирован под лицензией MIT. Подробности см. в файле [LICENSE](LICENSE).
+**Все права защищены.** Copyright (c) 2026 Bilolidin. All rights reserved.
+
+Код открыт для просмотра в портфолио-целях, но использование, копирование,
+изменение и распространение без явного разрешения автора запрещены.
+Подробности см. в файле [LICENSE](LICENSE).
 
 ---
 
