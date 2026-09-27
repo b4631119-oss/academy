@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 min-h-screen font-sans transition-colors duration-200;
+  @apply bg-slate-50 text-slate-900 min-h-screen font-sans leading-relaxed transition-colors duration-200;
 }
 
 .dark body,
@@ -118,4 +118,36 @@ body {
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ——— Glassmorphism ———
+   Используется точечно: шапка, dropdown и подложка сетки треков.
+   В текстовых блоках уроков стекло не применяется — там чистый фон. */
+.glass {
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+  background-color: rgb(255 255 255 / 0.72);
+}
+
+.dark .glass {
+  background-color: rgb(2 6 23 / 0.66);
+}
+
+/* Fallback: без backdrop-filter — плотный фон, чтобы читаемость не падала */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background-color: rgb(255 255 255 / 0.96); }
+  .dark .glass { background-color: rgb(2 6 23 / 0.96); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-up {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
