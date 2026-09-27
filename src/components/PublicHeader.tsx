@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
@@ -14,10 +14,26 @@ const navLinks = [
 
 export function PublicHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
+  // При скролле стекло становится плотнее — контент под шапкой заметно мельчает.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-800/60 transition-shadow",
+        scrolled
+          ? "bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-sm"
+          : "bg-white/60 dark:bg-slate-950/60 backdrop-blur-md"
+      )}
+    >
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-slate-900 dark:text-slate-100">
           <span className="text-sky-500 text-xl">◆</span>
@@ -64,7 +80,7 @@ export function PublicHeader() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <nav id="mobile-nav" className="sm:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-1" aria-label="Мобильная навигация">
+        <nav id="mobile-nav" className="sm:hidden border-t border-slate-200/60 dark:border-slate-800/60 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl px-4 py-3 space-y-1" aria-label="Мобильная навигация">
           {navLinks.map((link) => {
             const isActive = pathname === link.href ||
               (link.href !== "/" && pathname.startsWith(link.href))
