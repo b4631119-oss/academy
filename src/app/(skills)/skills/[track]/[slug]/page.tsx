@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: PageProps) {
 
   const fullContent = extractTextFromBlocks(lesson.blocks || [])
   const baseDescription = lesson.summary || fullContent.slice(0, 140)
-  const description = `Урок «${lesson.title}» из курса ${titles.ru} / Lesson "${lesson.title}" from ${titles.en} course. ${baseDescription} Начните обучение сегодня / Start learning today.`
+  const description = `Урок «${lesson.title}» из курса ${titles.ru}. ${baseDescription}`
 
   return {
     title: `${lesson.title} — ${titles.ru} | PROlab Academy`,
