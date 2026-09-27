@@ -61,7 +61,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1.5 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 py-1.5 z-50 fade-in" role="listbox" aria-label="Выбор темы">
+        <div className="absolute right-0 top-full mt-1.5 w-48 glass rounded-xl shadow-sm border border-slate-200/70 dark:border-slate-700/60 py-1.5 z-50 fade-in" role="listbox" aria-label="Выбор темы">
           {options.map((opt) => {
             const Icon = opt.icon
             const active = theme === opt.value
