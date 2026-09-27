@@ -48,11 +48,11 @@ export async function generateMetadata({ params }: PageProps) {
 
   return {
     title: `${titles.ru} — ${count} тем | PROlab Academy`,
-    description: `${descriptions.ru} ${descriptions.en} Start learning today.`,
+    description: descriptions.ru,
     keywords: [...(trackKeywords[track] || []), ...commonKeywords.slice(0, 4)],
     openGraph: {
       title: `${titles.ru} — ${count} тем | PROlab Academy`,
-      description: `${descriptions.ru} ${descriptions.en}`,
+      description: descriptions.ru,
       type: "website",
       url,
       siteName: "PROlab Academy",
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: PageProps) {
     twitter: {
       card: "summary_large_image",
       title: `${titles.ru} — ${count} тем | PROlab Academy`,
-      description: `${descriptions.ru} ${descriptions.en}`,
+      description: descriptions.ru,
       images: ["/hero-image.png"],
     },
     alternates: {
