@@ -240,7 +240,8 @@ export default async function LessonPage({ params }: PageProps) {
         </div>
 
         {/* Content */}
-        <div className="rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm sm:p-8">
+        {/* Поверхность чтения: чистый фон без блюра и теней — только текст */}
+        <div className="rounded-2xl border border-slate-200/70 dark:border-slate-800/70 bg-white dark:bg-slate-900 p-6 sm:p-9">
           <LessonBody lesson={lesson} />
         </div>
 
